@@ -660,6 +660,7 @@ function Salads({ onOrder }) {
         </p>
         <div className="salad-tags">
           <span>Steak</span>
+          <span>Rosbife</span>
           <span>Frango</span>
           <span>Camarão</span>
           <span>Italiana</span>
