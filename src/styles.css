@@ -978,31 +978,26 @@ svg {
   height: 100%;
   object-fit: cover;
   object-position: center bottom;
+  -webkit-user-drag: none;
+  user-select: none;
   transition:
     object-position 650ms cubic-bezier(0.2, 0.8, 0.2, 1),
     filter 650ms ease;
 }
 
-.salad-circle:hover,
-.salad-circle:focus-visible {
-  width: min(58vw, 850px);
-  border-radius: 46% 54% 52% 48% / 50% 47% 53% 50%;
-  box-shadow:
-    0 0 0 22px rgba(255, 255, 255, 0.14),
-    -28px 22px 60px rgba(0, 32, 72, 0.22);
-}
+@media (hover: hover) and (pointer: fine) {
+  .salad-circle:hover {
+    width: min(58vw, 850px);
+    border-radius: 46% 54% 52% 48% / 50% 47% 53% 50%;
+    box-shadow:
+      0 0 0 22px rgba(255, 255, 255, 0.14),
+      -28px 22px 60px rgba(0, 32, 72, 0.22);
+  }
 
-.salad-circle:hover img,
-.salad-circle:focus-visible img {
-  filter: saturate(1.08) contrast(1.03);
-  object-position: center 94%;
-}
-
-.salad-circle:focus-visible {
-  box-shadow:
-    0 0 0 22px rgba(255, 255, 255, 0.14),
-    0 0 0 27px var(--white),
-    -28px 22px 60px rgba(0, 32, 72, 0.22);
+  .salad-circle:hover img {
+    filter: saturate(1.08) contrast(1.03);
+    object-position: center 94%;
+  }
 }
 
 .salad-note {
@@ -1456,31 +1451,35 @@ svg {
   }
 
   .salad-world {
-    min-height: 1100px;
+    display: flex;
+    min-height: auto;
+    padding: 120px 35px 150px;
+    flex-direction: column;
   }
 
   .salad-copy {
-    top: 8%;
-    right: 35px;
-    left: 35px;
-    width: auto;
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: 100%;
   }
 
   .salad-circle {
+    position: relative;
     top: auto;
-    right: 8%;
-    bottom: 8%;
-    width: 84vw;
-  }
-
-  .salad-circle:hover,
-  .salad-circle:focus-visible {
-    width: 88vw;
+    right: auto;
+    bottom: auto;
+    width: min(84vw, 680px);
+    margin: 56px auto 0;
+    cursor: default;
+    pointer-events: none;
+    -webkit-touch-callout: none;
   }
 
   .salad-note {
     right: 4%;
-    bottom: 6%;
+    bottom: 5%;
   }
 
   .store-cards {
@@ -1614,29 +1613,28 @@ svg {
   }
 
   .salad-world {
-    min-height: 980px;
+    min-height: auto;
+    padding: 105px 22px 135px;
   }
 
   .salad-copy {
-    top: 7%;
-    right: 22px;
-    left: 22px;
+    top: auto;
+    right: auto;
+    left: auto;
   }
 
   .salad-circle {
-    right: -6%;
-    bottom: 7%;
-    width: 105vw;
-  }
-
-  .salad-circle:hover,
-  .salad-circle:focus-visible {
-    width: 105vw;
+    right: auto;
+    bottom: auto;
+    width: calc(100vw - 44px);
+    margin-top: 42px;
+    border-width: 10px;
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.12);
   }
 
   .salad-note {
     right: 4%;
-    bottom: 4%;
+    bottom: 3%;
     font-size: 1.15rem;
   }
 

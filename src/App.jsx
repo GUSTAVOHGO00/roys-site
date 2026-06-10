@@ -204,7 +204,7 @@ function WhatsAppContact() {
       href={whatsappUrl}
       target="_blank"
       rel="noreferrer"
-      aria-label="Fale conosco pelo WhatsApp: (98) 99128-9090"
+      aria-label="Fale conosco pelo WhatsApp"
     >
       <i><WhatsAppIcon /></i>
       <span>
@@ -669,12 +669,9 @@ function Salads({ onOrder }) {
       </div>
       <motion.div
         className="salad-circle"
-        tabIndex={0}
-        aria-label="Foto da Salada Steak Roy's"
         initial={{ rotate: -8, scale: 0.9 }}
         whileInView={{ rotate: 3, scale: 1 }}
         whileHover={{ rotate: 0, scale: 1.035, x: -24 }}
-        whileFocus={{ rotate: 0, scale: 1.035, x: -24 }}
         viewport={{ once: true }}
         transition={{ duration: 0.65, ease: [0.2, 0.8, 0.2, 1] }}
       >
@@ -791,9 +788,6 @@ function Footer({ onOrder }) {
         <img src="/assets/logo-primary-transparent.png" alt="Roy's Sandwich Shop" />
         <a href="https://www.instagram.com/roysbrasil/" target="_blank" rel="noreferrer">
           @roysbrasil
-        </a>
-        <a href={whatsappUrl} target="_blank" rel="noreferrer">
-          Fale conosco: (98) 99128-9090
         </a>
         <span>© {new Date().getFullYear()} Roy&apos;s</span>
       </div>
