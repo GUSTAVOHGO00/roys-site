@@ -46,7 +46,8 @@ const menuProducts = [
   {
     name: "Choripán",
     category: "Linha Chef",
-    image: null,
+    image: "/assets/choripan-hero.webp",
+    imagePosition: "center 48%",
     color: "#fabb15",
     copy: "Um sabor da Linha Chef que foge do óbvio.",
   },
@@ -67,14 +68,16 @@ const menuProducts = [
   {
     name: "Frango Crispy King",
     category: "Clássicos",
-    image: null,
+    image: "/assets/frango-crispy-king-hero.webp",
+    imagePosition: "68% center",
     color: "#ea1f27",
     copy: "Crocância e recheio em uma combinação clássica.",
   },
   {
     name: "Frango Crispy Royal",
     category: "Clássicos",
-    image: null,
+    image: "/assets/frango-crispy-royal-hero.webp",
+    imagePosition: "center 54%",
     color: "#0767b1",
     copy: "Mais uma opção crispy para escolher do seu jeito.",
   },
@@ -351,10 +354,6 @@ function Hero({ onOrder }) {
         <span>Super 30 cm</span>
       </div>
 
-      <div className="hero-scroll">
-        <span>Role para provar</span>
-        <i />
-      </div>
     </section>
   );
 }
@@ -420,7 +419,11 @@ function MenuGallery({ onOrder }) {
           transition={{ duration: 0.3 }}
         >
           {selected.image ? (
-            <img src={selected.image} alt={`Sub ${selected.name} da Roy's`} />
+            <img
+              src={selected.image}
+              alt={`Sub ${selected.name} da Roy's`}
+              style={{ objectPosition: selected.imagePosition || "center" }}
+            />
           ) : (
             <div className="photo-coming">
               <Crown />
