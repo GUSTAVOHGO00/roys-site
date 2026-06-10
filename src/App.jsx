@@ -672,10 +672,10 @@ function Salads({ onOrder }) {
         aria-label="Foto da Salada Steak Roy's"
         initial={{ rotate: -8, scale: 0.9 }}
         whileInView={{ rotate: 3, scale: 1 }}
-        whileHover={{ rotate: 0, scale: 1.08 }}
-        whileFocus={{ rotate: 0, scale: 1.08 }}
+        whileHover={{ rotate: 0, scale: 1.035, x: -24 }}
+        whileFocus={{ rotate: 0, scale: 1.035, x: -24 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.55, ease: [0.2, 0.8, 0.2, 1] }}
+        transition={{ duration: 0.65, ease: [0.2, 0.8, 0.2, 1] }}
       >
         <img src="/assets/steak-salad-vertical.webp" alt="Salada Steak Roy's bem servida" />
       </motion.div>
