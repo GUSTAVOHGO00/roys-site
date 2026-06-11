@@ -21,31 +21,16 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: gh api "repos/${GITHUB_REPOSITORY}/pages"
 
-      - name: Reset and restore custom domain
+      - name: Revalidate custom domain
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          restore_domain() {
-            printf '%s' '{"cname":"www.roys.com.br","build_type":"workflow"}' |
-              gh api \
-                --method PUT \
-                -H "X-GitHub-Api-Version: 2022-11-28" \
-                "repos/${GITHUB_REPOSITORY}/pages" \
-                --input -
-          }
-
-          trap restore_domain EXIT
-
-          printf '%s' '{"cname":null,"build_type":"workflow"}' |
+          printf '%s' '{"cname":"www.roys.com.br","build_type":"workflow"}' |
             gh api \
               --method PUT \
               -H "X-GitHub-Api-Version: 2022-11-28" \
               "repos/${GITHUB_REPOSITORY}/pages" \
               --input -
-
-          sleep 20
-          restore_domain
-          trap - EXIT
 
       - name: Wait for certificate and enforce HTTPS
         env:
