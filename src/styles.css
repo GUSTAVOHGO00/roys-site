@@ -637,44 +637,44 @@ svg {
   right: 7%;
   bottom: 7%;
   display: flex;
-  width: clamp(132px, 10vw, 156px);
+  width: clamp(150px, 11vw, 176px);
   aspect-ratio: 1;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 18px;
+  padding: 14px;
   border-radius: 50%;
   color: var(--ink);
   background: var(--yellow);
   font-family: var(--display);
-  line-height: 0.95;
+  line-height: 0.9;
   text-align: center;
   text-transform: uppercase;
   transform: rotate(-5deg);
 }
 
 .manifesto-sticker img {
-  width: clamp(28px, 2.4vw, 36px);
+  width: clamp(32px, 2.6vw, 40px);
   height: auto;
-  margin-bottom: 7px;
-  opacity: 0.48;
+  margin-bottom: 9px;
+  opacity: 0.7;
 }
 
 .manifesto-sticker span {
   display: block;
   max-width: 100%;
-  font-size: clamp(0.68rem, 0.72vw, 0.82rem);
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-size: clamp(0.78rem, 0.82vw, 0.94rem);
+  font-weight: 800;
+  letter-spacing: 0.015em;
   white-space: nowrap;
 }
 
 .manifesto-sticker strong {
   display: block;
   max-width: 100%;
-  margin-top: 4px;
-  font-size: clamp(0.98rem, 1.08vw, 1.18rem);
-  line-height: 0.92;
+  margin-top: 5px;
+  font-size: clamp(1.12rem, 1.25vw, 1.38rem);
+  line-height: 0.88;
   white-space: nowrap;
 }
 
@@ -1590,22 +1590,22 @@ svg {
   }
 
   .manifesto-sticker {
-    width: 124px;
-    padding: 15px;
+    width: 146px;
+    padding: 12px;
   }
 
   .manifesto-sticker img {
-    width: 27px;
-    margin-bottom: 6px;
+    width: 32px;
+    margin-bottom: 8px;
   }
 
   .manifesto-sticker span {
-    font-size: 0.65rem;
+    font-size: 0.76rem;
   }
 
   .manifesto-sticker strong {
-    margin-top: 3px;
-    font-size: 0.9rem;
+    margin-top: 4px;
+    font-size: 1.08rem;
   }
 
   .manifesto-copy {
